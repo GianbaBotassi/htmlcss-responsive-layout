@@ -14,6 +14,9 @@ a{
 body{
     font-family: 'PT Sans', sans-serif;
 }
+h2{
+    margin-bottom: 2rem;
+}
 h3{
     margin-bottom: 1.5rem;
     font-weight: 700;
@@ -35,7 +38,7 @@ p{
 .btn-blue{
     background-color: #0084fd;
     color: #fff;
-    padding: 0.5rem 4rem;
+    padding: 0.5rem 3rem;
 }
 
 /* HOVER STATUS */
@@ -51,8 +54,11 @@ html{
     width: 90%;
     margin: 0 auto;
 }
-.purple-band{
+.bg-purple{
     background-color: #9792e4;
+}
+.bg-white{
+    background-color: #fff;
 }
 .row{
     display: flex;
@@ -68,7 +74,7 @@ html{
 
 /* SITE SECTIONS */
 
-/* Header */
+/* HEADER */
 header{
     background-color: #0084fd;
     color: #fff;
@@ -96,9 +102,9 @@ nav a{
 
 
 
-/* DEVELOPER */
+/* DEVELOPER SECTION */
 .developer{
-    padding-top: 7rem;
+    padding:7rem 0;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
@@ -118,7 +124,7 @@ nav a{
 .developer .col-app{
     flex-wrap: wrap;
     justify-content: center;
-    gap:1rem;
+    gap: 1rem 2rem;
 }
 .developer .col-left, .developer .col-right{
     width: 100%;
@@ -141,6 +147,29 @@ nav a{
     margin-bottom: 1rem;
 }
 
+/* PLANNING SECTION */
+.planning{
+    padding:5rem 0;
+}
+.planning img{
+    max-width: 100%;;
+}
+.planning div:first-child{
+    color: #fff;
+}
+.planning div:first-child h2{
+    font-size: 2.2rem;
+    margin-top: 3rem;
+}
+.planning div:last-child{
+    padding: 1rem;
+    border-radius: 3rem;
+}.planning div:last-child i{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+    padding: 1.5rem;
+}
 
 
 
@@ -176,6 +205,8 @@ nav a{
         .developer .col-right{
             width: 70%;
         }
+
+
     }
 
 
@@ -198,7 +229,18 @@ nav a{
         }
 
                  /* DEVELOPER SECTION */
+        .developer .col-app{
+            flex-wrap: nowrap;
+        }
         .developer .col-left, .developer .col-right{
+            width: 50%;
+        }
+                 /* PLANNING SECTIONS */
+        .planning{
+            display: flex;
+            gap: 3rem;
+        }
+        .planning div{
             width: 50%;
         }
 
@@ -216,6 +258,6 @@ nav a{
 
 
 /* DEBUG RULES */
-section{
+/* section{
     height: 600px;
-}
+} */
