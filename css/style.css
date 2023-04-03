@@ -1,0 +1,141 @@
+/* GENERAL STYLES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+
+/* BUTTONS STYLES */
+.btn{
+    background-color: #fff;
+    color: #000;
+    border-radius: 1rem;
+}
+
+
+/* HOVER STATUS */
+
+
+
+/* UTILITIES*/
+/* Layout */
+html{
+    font-size: 1.2rem;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.purple-band{
+    background-color: #9792e4;
+}
+.row{
+    display: flex;
+}
+.col{
+    padding-right:1rem;
+    padding-left:1rem;
+}
+.block{
+    display: block;
+}
+
+/* TEXT */
+.text-center{
+    text-align: center;
+}
+
+/* SITE SECTIONS */
+
+/* Header */
+header{
+    background-color: #0084fd;
+    color: #fff;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+nav{
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+nav img{
+    max-width: 100%;
+}
+nav a{
+    padding: 0.5rem 0;
+}
+#nav-desktop{
+    display: none;
+}
+
+/* DEVELOPER */
+.developer{
+    padding-top: 7rem;
+}
+
+
+/* Responsive desktop */
+
+
+
+.developer{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+.developer .col{
+    width: calc((100%/3) - 2rem);
+    border: solid 1px black;
+}
+.developer .col-app{
+    width: calc((100%/3)*2 - 3rem);
+}
+
+
+
+
+    /* Responsive tablet*/
+    @media screen and (min-width:480px){
+        html{
+            font-size: 1rem;
+        }
+    }
+    /* Responsive desktop */
+    @media screen and (min-width:768px){
+        html{
+            font-size: 0.8rem;
+        }
+        .container{
+            width: 60%;
+        }
+        #nav-mobile{
+            display: none;
+        }
+        #nav-desktop{
+            display: flex;
+        }
+    }
+
+
+
+/* DEBUG RULES */
+section{
+    height: 600px;
+}
+.developer .col{
+    background-color: green;
+    height: 100px;
+}
