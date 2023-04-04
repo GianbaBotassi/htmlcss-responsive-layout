@@ -25,6 +25,7 @@ h2{
 h3{
     margin-bottom: 1.5rem;
     font-weight: 700;
+    font-size: 1.5rem;
 }
 p{
     margin-bottom: 1.5rem;
@@ -44,6 +45,10 @@ p{
     background-color: #0084fd;
     padding: 0.5rem 3rem;
 }
+.btn-purple{
+    background-color: #9792e4;
+    padding: 0.5rem 3rem;
+}
 
 /* HOVER STATUS */
 
@@ -52,12 +57,12 @@ p{
 /* UTILITIES*/
 /* Layout */
 html{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 .container{
     width: 80%;
     margin: 0 auto;
-    padding:5rem 0;
+    padding: 4rem 0;
 }
 .row{
     display: flex;
@@ -65,16 +70,32 @@ html{
 .block{
     display: block;
 }
+.img-circle-crop{
+    border-radius: 100%;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    width: 15rem;
+    height: 15rem;
+}
 
 /* TEXT */
 .text-center{
     text-align: center;
+}
+.font-black{
+    color: #000;
 }
 .font-white{
     color: #fff;
 }
 .font-purple{
     color: #9792e4;
+}
+.font-grey{
+    color: #5a6e7f;
+}
+.font-blue{
+    color: #0888fd;
 }
 
 /* BACKGROUND */
@@ -84,13 +105,18 @@ html{
 .bg-white{
     background-color: #fff;
 }
+.bg-lightblue{
+    background-color: #b5ddff;
+}
+.bg-blue{
+    background-color: #0084fd;
+}
 
 
 /* SITE SECTIONS */
 
 /* HEADER */
 header{
-    background-color: #0084fd;
     position: fixed;
     z-index: 999;
     width: 100%;
@@ -122,40 +148,35 @@ nav a{
 
 
 /* DEVELOPER SECTION */
-.developer{
+.flex-cards{
     padding:7rem 0;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 1rem;
-    color: #5a6e7f;
+    gap: 2rem 1rem;
     font-weight: 700;
 
 }
-.developer .col{
+.flex-cards .col{
     border-radius: 1rem;
     width: 100%;
-    background-color: #b5ddff;
     padding: 2rem 2rem 0 2rem ;
 }
 
-.developer .col-app{
+.flex-cards .col-app{
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem 2rem;
 }
-.developer .col-left, .developer .col-right{
+.flex-cards .col-left, .flex-cards .col-right{
     width: 100%;
 }
-.developer img{
+.flex-cards img{
     max-width: 100%;
 }
-.developer .col-left{
+.flex-cards .col-left{
     padding-bottom: 1rem;;
 }
-.developer h3{
-    color: #0888fd;
-}
-.developer .col-right{
+.flex-cards .col-right{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -178,8 +199,11 @@ nav a{
     border-radius: 100%;
     padding: 1rem;
 }
+.planning div:last-child h2{
+    margin-top: 1rem;
+}
 .planning img{
-        max-width: 100%;
+    max-width: 100%;
 }
 
 /* TESTIMONIALS SECTION */
@@ -191,16 +215,23 @@ nav a{
 }
 .card{
     padding: 1rem;
-    border-radius: 5rem;
+    border-radius: 3rem;
     margin: 2rem 0 1rem;
 }
-.card img{
-    max-width: 100%;
-    border-radius: 100%;
+
+/* BENEFITS SECTION */
+
+/* Used flex-cards class from DEVELOPER SECTION (same layout) */
+.benefits span{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.benefits .btn{
     margin-bottom: 2rem;
 }
 
 
+/* ABOUT US SECTION */
 
 
 
@@ -227,30 +258,31 @@ nav a{
 
                  /* DEVELOPER SECTION */
 
-        .developer .col{
+        .flex-cards .col{
             width: calc((100%/3) - 1rem);
         }
-        .developer .col-app{
+        .flex-cards .col-app{
             width: calc((100%/3)*2 - 0.5rem);
             justify-content: flex-start;
         }
 
-        .developer .col-right{
+        .flex-cards .col-right{
             width: 70%;
         }
                 /* TESTIMONIALS SECTION */
         .card{
             display: flex;
             align-items: center;
-            gap: 3rem;
+            gap: 4rem;
             text-align: left;
             padding: 2rem 1rem;
         }
         .card div:first-child{
-            width: 30%;
+            flex-grow: 1;
+
         }
         .card div:last-child{
-            width: 70%;
+            flex-grow: 1;
         }
         .card img, .card h3{
             margin-bottom: 0;
@@ -280,10 +312,10 @@ nav a{
         }
 
                  /* DEVELOPER SECTION */
-        .developer .col-app{
+        .flex-cards .col-app{
             flex-wrap: nowrap;
         }
-        .developer .col-left, .developer .col-right{
+        .flex-cards .col-left, .flex-cards .col-right{
             width: 50%;
         }
                  /* PLANNING SECTIONS */
