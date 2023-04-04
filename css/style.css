@@ -13,10 +13,10 @@ a{
 }
 body{
     font-family: 'PT Sans', sans-serif;
-    line-height: 2rem;
 }
 h2{
     margin-bottom: 2rem;
+    line-height: 2rem;
 }
 .big{
     font-size:2.3rem;
@@ -27,14 +27,17 @@ h3{
     margin-bottom: 2rem;
     font-weight: 700;
     font-size: 1.6rem;
+    line-height: 2rem;
 }
 h4{
     font-size: 1.2rem;
     margin-bottom: 2rem;
     letter-spacing: 0.2rem;
+    line-height: 2rem;
 }
 p{
     margin-bottom: 2rem;
+    line-height: 2rem;
 }
 
 /* BUTTONS STYLES */
@@ -82,8 +85,8 @@ p{
     border-radius: 100%;
     margin-bottom: 1rem;
     object-fit: cover;
-    width: 15rem;
-    height: 15rem;
+    width: 12rem;
+    height: 12rem;
 }
 
 /* TEXT */
@@ -151,7 +154,7 @@ nav ul{
     gap: 1rem;
 }
 nav i{
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 nav a{
     padding: 0.5rem 0;
@@ -172,7 +175,7 @@ nav a{
 .flex-cards .col{
     border-radius: 1rem;
     width: 100%;
-    padding: 2rem 2rem 0 2rem ;
+    padding: 2rem 1.5rem 0;
 }
 .developer{
     padding: 7rem 0 5rem;
@@ -247,6 +250,9 @@ nav a{
 .benefits{
     font-size: 1.4rem;
 }
+.benefits h2.big{
+    margin: 0 0 4rem;
+}
 .benefits span{
     font-size: 3rem;
     margin-bottom: 2rem;
@@ -254,15 +260,17 @@ nav a{
 .benefits .btn{
     margin-bottom: 2rem;
 }
-.benefits div:first-child{
+.benefits > div{
     margin-top: 2rem;
+}
+.benefits p{
+    font-weight: normal;
 }
 
 
 /* ABOUT US SECTION */
 .about-us{
     font-size: 1.3rem;
-    line-height: 3rem;
 }
 .about-us h2{
     font-size: 3.5rem;
@@ -272,14 +280,21 @@ nav a{
     margin-top: 1rem;
     width: fit-content;
 }
+.about-us img.img-circle-crop{
+    width: 10rem;
+    height: 10rem;
+}
 .about-us-relative i{
     position: absolute;
     right: 0;
     top: 0;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 .about-us h3{
     font-size: 2rem;
+}
+.about-us p{ 
+    line-height: 3rem;
 }
 
 
@@ -287,7 +302,7 @@ nav a{
 .call-to-action span{
     color:#fdc15f;
     font-size: 4rem;
-    padding: 2rem 0 4rem;
+    padding-bottom: 2rem;
     font-weight: 700;
 }
 .call-to-action p:last-child{
@@ -300,6 +315,7 @@ nav a{
     padding: 1.3rem 5rem ;
     font-weight: bold;
     font-size: 1.2rem;
+    margin: 2rem auto;
 }
 
 /* Rules a underline footer and call to action */
@@ -320,12 +336,13 @@ footer p:last-child{
 
 /* RESPONSIVE */
 
-    /* Responsive tablet*/
+                    /* RESPONSIVE TABLET*/
+
     @media screen and (min-width:480px){
 
                 /* LAYOUT */
         html{
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
         .container, .nav-cont{
             width: 90%;
@@ -348,11 +365,19 @@ footer p:last-child{
         .developer .col-right{
             width: 70%;
         }
+               
+                /* PLANNING SECTION */
+
+        .planning div:first-child h2{
+            font-size: 4.5rem;
+            margin:4rem 0;
+        }
+
                 /* TESTIMONIALS SECTION */
         .card{
             display: flex;
             align-items: center;
-            gap: 4rem;
+            gap: 2rem;
             text-align: left;
             padding: 2rem 1rem;
         }
@@ -365,28 +390,62 @@ footer p:last-child{
         .card img, .card h3{
             margin-bottom: 0;
         }
+        .testimonials p, .testimonials i{
+            font-size: 1.2rem;
+        }
                 /* BENEFITS SECTION */
         .benefits .col{
             width: calc(50% - 1rem);
+            padding-top: 3rem;
+        }
+        .benefits p{
+            font-size:1.1rem;
+        }
+        .benefits span{
+            font-size: 4rem;
+            margin-bottom: 0;
         }
                /* ABOUT US SECTION */
         .about-us{
             display: flex;
             gap: 3rem;
         }
+        .about-us-right{
+            flex-basis: 40%;
+        }
         .container.about-us{
             width: 85%;
         }
-                /*  */
-
+        .about-us h3{
+            font-size: 1.5rem;
+        }
+        .about-us .btn{
+            font-size: 0.8rem;
+            line-height: 0;
+        }
+                /* CALL TO ACTION */
+        .call-to-action.container{
+            width:60%;
+        }
+        .call-to-action span{
+            font-size: 5rem;
+        }
+                        /* FOOTER */
+        footer p{
+            width: 60%;
+            margin: 0 auto;
+        }
     }
 
+
+
+                        /* RESPONSIVE LAPTOP */
 
     @media screen and (min-width:768px){
 
                 /* LAYOUT */
         html{
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
         .container, .nav-cont{
             width: 60%;
@@ -412,10 +471,22 @@ footer p:last-child{
         .planning{
             display: flex;
             gap: 3rem;
+            width: 40%;
         }
         .planning div{
             width: 50%;
         }
+        .planning div:first-child h2{
+            font-size: 2.3rem;
+        }
+        .planning .bg-white{
+            align-self: flex-end;
+        }
+        .planning .bg-white img{
+            width: 12rem;
+        }
+
+
                 /* BENEFITS SECTION */
         .benefits .col{
             width: calc((100%/3) - 1rem);
@@ -424,11 +495,22 @@ footer p:last-child{
         .container.about-us{
             width: 55%;
         }
-                /* CALL TO ACTION SECTION */
-        .call-to-action{
-            max-width: 20%;
+        .about-us .col-left{
+            width: 80%;
+            }
+        .about-us .col-right{
+                width: 20%;
         }
-
+                /* CALL TO ACTION SECTION */
+        .call-to-action p{
+            width: 45%;
+            margin: 0 auto;
+        }
+                /* FOOTER */
+        footer p{
+            width: 40%;
+            margin: 0 auto;
+        }
     }
 
 
@@ -441,6 +523,3 @@ footer p:last-child{
 
 
 /* DEBUG RULES */
-/* section{
-    height: 600px;
-} */
